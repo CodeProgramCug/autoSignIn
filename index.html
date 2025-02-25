@@ -62,7 +62,14 @@
             text-decoration: none;
             display: block;
         }
-
+        .img-title{
+            /* padding: 0 10; */
+        }
+        .img-item{
+            padding: 0 4px;
+            width: 100px;
+            height: 100px;
+        }
         @media (max-width: 600px) {
             .links-container {
                 margin: 10px;
@@ -73,8 +80,14 @@
 </head>
 <body>
     <div class="links-container">
-        <div class="section-title">打卡签到领金币/立减金/红包汇总</div>
-
+        <div class="section-title">打卡领金币/立减金/红包汇总</div>
+        <div class="link-section">
+            <div class="img-title">
+                <img class="img-item" src="./微信图片_20250225225415.jpg" >
+                <img class="img-item" src="./微信图片_20250225225449.jpg">
+            </div>
+            
+        </div>
         <div class="link-section">
             <div class="link-title">每日签到领金币</div>
             <button class="open-all-button" onclick="openAllLinks()">一键打开所有页面</button>
@@ -86,7 +99,7 @@
                     <a href="https://flow.hn.189.cn/hnfx/hkly/newhlwkflzxqd1?clientid=WXHL117&tk=" target="_blank">电信打卡领金币</a>
                 </li>
                 <li class="link-item">
-                    <a href="https://example.com/signin-gold-3" target="_blank">打卡领金币通道C：新用户首日签到送200金币</a>
+                    <a href="https://mbas.mbs.boc.cn/WeiBankFront/weixinVue/openApp/index.html#/openApp?lastShortUrl=BCxiPVJuLi" target="_blank">福仔云游记每日签到</a>
                 </li>
             </ul>
         </div>
@@ -95,7 +108,7 @@
             <div class="link-title">限时立减金领取</div>
             <ul class="link-list">
                 <li class="link-item">
-                    <a href="https://example.com/reduce-1" target="_blank">立减金领取通道A：满50减10</a>
+                    <a href="#小程序://云闪付/Gn6frzjxdlNihZt" target="_blank">#小程序://云闪付/Gn6frzjxdlNihZt</a>
                 </li>
                 <li class="link-item">
                     <a href="https://example.com/reduce-2" target="_blank">立减金领取通道B：满100减20</a>
@@ -106,17 +119,35 @@
             </ul>
         </div>
 
-        <!-- 你可以根据需要添加更多分类和链接 -->
+        <div class="link-section">
+            <div class="link-title">每月立减金领取</div>
+            <ul class="link-list">
+                <li class="link-item">
+                    <a href="#小程序://中国建设银行/OQmP068lUbpi1sK" target="_blank">小程序:中国建设银行立减金领取</a>
+                </li>
+                <li class="link-item">
+                    <a href="#小程序://光大银行/TES2kYh65FZb61E" target="_blank">小程序:光大银行立减金领取</a>
+                </li>
+                <!-- <li class="link-item">
+                    <a href="#小程序://云闪付/Gn6frzjxdlNihZt" target="_blank">小程序:云闪付</a>
+                </li> -->
+            </ul>
+        </div>
 
     </div>
     <script>
         function openAllLinks() {
             // 获取所有链接
             const links = document.querySelectorAll('.link-list a');
-            // 遍历并打开每个链接
-            links.forEach(link => {
-                window.open(link.href, '_blank');
-            });
+            try{
+                // 遍历并打开每个链接
+                links.forEach(link => {
+                    window.open(link.href, '_blank');
+                });
+            } catch(e) {
+                console.error(e)
+            }
+            
         }
     </script>
 </body>
