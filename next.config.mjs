@@ -1,3 +1,18 @@
+const mode = "export";
+console.log("[Next] build mode", mode);
+
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
+let assetPrefix = "";
+let basePath = "";
+
+if (isGithubActions) {
+  // 去掉 `<owner>/`
+  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
+
+  assetPrefix = `/${repo}/`;
+  basePath = `/${repo}`;
+}
+
 let userConfig = undefined
 try {
   // try to import ESM first
@@ -27,6 +42,9 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  basePath,
+  assetPrefix,
+  output: mode,
 }
 
 if (userConfig) {
