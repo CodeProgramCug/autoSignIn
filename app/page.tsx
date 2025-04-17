@@ -72,9 +72,9 @@ const ecommerceInfo = [
 ]
 
 const images = [
-  { src:`${process.env.GITHUB_REPOSITORY || ''}/images/wechat-pay-points.jpeg`, alt: "微信支付宝积分二维码" },
-  { src: `${process.env.GITHUB_REPOSITORY || ''}/images/wechat-pay-recommend.jpeg`, alt: "推荐使用微信支付二维码" },
-  { src: `${process.env.GITHUB_REPOSITORY || ''}/images/wechat-contact.jpeg`, alt: "微信联系人二维码" },
+  { src:`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-pay-points.jpeg`, alt: "微信支付宝积分二维码" },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-pay-recommend.jpeg`, alt: "推荐使用微信支付二维码" },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-contact.jpeg`, alt: "微信联系人二维码" },
 ]
 
 // Components

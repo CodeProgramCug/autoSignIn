@@ -28,4 +28,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: out  # 确认这是你的构建输出目录
-          # clean: true
+          clean: true
