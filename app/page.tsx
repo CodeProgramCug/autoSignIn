@@ -155,7 +155,7 @@ export default function CheckinRewardsPage() {
   return (
     <div className="min-h-screen bg-[#f0f8ff] py-6">
       <div className="max-w-[800px] mx-auto my-5 p-5 md:p-6 bg-white rounded-lg shadow-md">
-        <h1 className="text-2xl font-bold mb-4 text-center text-[#2c3e50]">打卡领金币/立减金/红包汇总</h1>
+        <h1 className="text-2xl font-bold mb-4 text-center text-[#2c3e50]">福利领取中心</h1>
 
         <ImageGallery />
 
