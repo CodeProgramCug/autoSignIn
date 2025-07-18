@@ -1,33 +1,32 @@
-const mode = "export";
-console.log("[Next] build mode", mode);
-
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
-let assetPrefix = "";
-let basePath = "";
-
-if (isGithubActions) {
-  // 去掉 `<owner>/`
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
-
-  assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
-}
-
-let userConfig = undefined
-try {
-  // try to import ESM first
-  userConfig = await import('./v0-user-next.config.mjs')
-} catch (e) {
-  try {
-    // fallback to CJS import
-    userConfig = await import("./v0-user-next.config");
-  } catch (innerError) {
-    // ignore error
-  }
-}
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // PWA 配置
+  async headers() {
+    return [
+      {
+        source: '/sw.js',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate',
+          },
+          {
+            key: 'Service-Worker-Allowed',
+            value: '/',
+          },
+        ],
+      },
+      {
+        source: '/manifest.json',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ]
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -37,33 +36,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
-    parallelServerCompiles: true,
-  },
-  basePath,
-  assetPrefix,
-  output: mode,
-}
-
-if (userConfig) {
-  // ESM imports will have a "default" property
-  const config = userConfig.default || userConfig
-
-  for (const key in config) {
-    if (
-      typeof nextConfig[key] === 'object' &&
-      !Array.isArray(nextConfig[key])
-    ) {
-      nextConfig[key] = {
-        ...nextConfig[key],
-        ...config[key],
-      }
-    } else {
-      nextConfig[key] = config[key]
-    }
-  }
 }
 
 export default nextConfig
