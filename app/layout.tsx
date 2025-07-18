@@ -9,8 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "微信打卡签到领金币/立减金汇总",
   description: "汇总各种打卡签到领金币、立减金、红包的链接",
-  manifest: "/manifest.json",
-  themeColor: "#2c3e50",
+  // themeColor: "#2c3e50",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -39,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
-      <head>
+      {/* <head>
         <meta name="application-name" content="打卡汇总" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -60,7 +59,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2c3e50" />
         <link rel="shortcut icon" href="/favicon.ico" />
-      </head>
+      </head> */}
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}

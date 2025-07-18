@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useState, useEffect } from "react"
+import { ImageModal } from "@/components/image-modal"
 import { PWAInstall } from "@/components/pwa-install"
 import { OfflineIndicator } from "@/components/offline-indicator"
 import { Coins, Train, Smartphone } from "lucide-react"
@@ -72,6 +73,12 @@ const ecommerceInfo = [
   { title: "京东", content: '关注"京东JD.COM"公众号，点击"粉丝福利"进行签到兑红包。' },
   { title: "淘宝/天猫", content: "淘宝APP右上角每天红包签到，周日额外瓜分五千万。" },
   { content: "天猫超市里喵店签到可以兑换商品。" },
+]
+
+const images = [
+  { src:`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-pay-points.jpeg`, alt: "微信支付宝积分二维码" },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-pay-recommend.jpeg`, alt: "推荐使用微信支付二维码" },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-contact.jpeg`, alt: "微信联系人二维码" },
 ]
 
 // Data for 火车票优惠券
@@ -205,25 +212,7 @@ function InfoSection({ title, items, className = "" }: InfoSectionProps) {
 function ImageGallery() {
   return (
     <div className="mb-8" style={{marginBottom: '1rem'}}>
-      <div className="flex flex-wrap justify-center">
-        <div className="px-1">
-          <img
-            src="/images/wechat-pay-points.jpeg"
-            alt="微信支付宝积分二维码"
-            className="w-[100px] h-[100px] object-cover"
-          />
-        </div>
-        <div className="px-1">
-          <img
-            src="/images/wechat-pay-recommend.jpeg"
-            alt="推荐使用微信支付二维码"
-            className="w-[100px] h-[100px] object-cover"
-          />
-        </div>
-        <div className="px-1">
-          <img src="/images/wechat-contact.jpeg" alt="微信联系人二维码" className="w-[100px] h-[100px] object-cover" />
-        </div>
-      </div>
+      <ImageModal images={images} />
     </div>
   )
 }
@@ -232,7 +221,7 @@ function ImageGallery() {
 function DiscountContent() {
   return (
     <div>
-      <LinkSection title="每日签到领金币" links={dailyCheckinLinks} showOpenAllButton={true} />
+      <LinkSection title="每日签到领金币" links={dailyCheckinLinks} showOpenAllButton={false} />
       <LinkSection title="限时立减金领取" links={limitedTimeDiscountLinks} />
       <LinkSection title="每周领取" links={weeklyCollectionLinks} />
       <LinkSection title="每月立减金领取" links={monthlyDiscountLinks} />
@@ -338,21 +327,21 @@ function AlipayContent() {
 }
 
 export default function CheckinRewardsPage() {
-  // 注册 Service Worker
-  useEffect(() => {
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker
-          .register("/sw.js")
-          .then((registration) => {
-            console.log("SW registered: ", registration)
-          })
-          .catch((registrationError) => {
-            console.log("SW registration failed: ", registrationError)
-          })
-      })
-    }
-  }, [])
+  // // 注册 Service Worker
+  // useEffect(() => {
+  //   if ("serviceWorker" in navigator) {
+  //     window.addEventListener("load", () => {
+  //       navigator.serviceWorker
+  //         .register("/sw.js")
+  //         .then((registration) => {
+  //           console.log("SW registered: ", registration)
+  //         })
+  //         .catch((registrationError) => {
+  //           console.log("SW registration failed: ", registrationError)
+  //         })
+  //     })
+  //   }
+  // }, [])
 
   return (
     <div className="min-h-screen bg-[#f0f8ff] py-6" style={{paddingTop: "0rem"}}>
