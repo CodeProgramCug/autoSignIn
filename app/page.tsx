@@ -84,8 +84,10 @@ const images = [
 // Data for 火车票优惠券
 const trainTicketLinks: LinkItem[] = [
   { href: "https://m.tb.cn/h.hQaDCUx?tk=UB9n42ji01H", text: "【闲鱼】 - 火车券20元无门槛火车票优惠券" },
+  { href: "https://ur.alipay.com/_4gRmyjz0b1EF59Mw3Jh1oK", text: "支付宝会员 - 积分兑换火车票券" },
+  { href: "https://m.tb.cn/h.hQb5UbZ", text: "淘宝淘金币 - 淘金币兑换火车票券" },
+  { href: "#小程序://支付有优惠/7ULh6EaLcQyUjMb", text: "支付有优惠 - 金币兑换火车票券" },
   { href: "https://kyfw.12306.cn/otn/resources/login.html", text: "12306官网 - 支付宝购票返券" },
-  { href: "https://render.alipay.com/p/c/180020180000047875", text: "支付宝会员 - 积分兑换火车票券" },
   { href: "https://m.ly.com/", text: "同程旅行 - 新用户领15元券" },
   { href: "https://www.didiglobal.com/", text: "滴滴出行小程序 - 领最高30元券" },
   { href: "https://www.qunar.com/", text: "去哪儿 - 领5元火车票券" },
@@ -125,7 +127,7 @@ const trainTicketTips = [
 
 // Data for 支付宝优惠券
 const alipayLinks: LinkItem[] = [
-  { href: "https://render.alipay.com/p/c/180020180000047875", text: "支付宝会员中心 - 积分兑换优惠券" },
+  { href: "https://ur.alipay.com/_4gRmyjz0b1EF59Mw3Jh1oK", text: "支付宝会员中心 - 积分兑换优惠券" },
   { href: "https://ur.alipay.com/", text: "支付宝生活号 - 每日签到领积分" },
   { href: "https://koubei.alipay.com/", text: "口碑 - 到店付款优惠券" },
   { href: "https://www.ele.me/", text: "饿了么 - 外卖红包券" },
