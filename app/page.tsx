@@ -91,11 +91,11 @@ const tabImages = {
   train: [
     { src:`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-pay-points.jpeg`, alt: "微信支付宝积分二维码" },
     { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-pay-recommend.jpeg`, alt: "推荐使用微信支付二维码" },
-    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-contact.jpeg`, alt: "微信联系人二维码" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/yunshanfu_chou.jpg`, alt: "微信联系人二维码" },
   ],
   alipay: [
-    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/alipay-1.jpeg`, alt: "支付宝会员积分兑换" },
-    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/alipay-2.jpeg`, alt: "支付宝优惠券领取中心" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/Alipay_hongbao.jpg`, alt: "支付宝会员积分兑换" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/yunshanfu_chou.jpg`, alt: "支付宝优惠券领取中心" },
     { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-pay-recommend.jpeg`, alt: "支付宝支付优惠指南" }
   ]
 }
