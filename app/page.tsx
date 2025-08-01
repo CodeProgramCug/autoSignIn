@@ -81,6 +81,25 @@ const images = [
   { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-contact.jpeg`, alt: "微信联系人二维码" },
 ]
 
+// 按tab分类的图片集合
+const tabImages = {
+  discount: [
+    { src:`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-pay-points.jpeg`, alt: "微信支付宝积分二维码" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-pay-recommend.jpeg`, alt: "推荐使用微信支付二维码" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-contact.jpeg`, alt: "微信联系人二维码" },
+  ],
+  train: [
+    { src:`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-pay-points.jpeg`, alt: "微信支付宝积分二维码" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-pay-recommend.jpeg`, alt: "推荐使用微信支付二维码" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-contact.jpeg`, alt: "微信联系人二维码" },
+  ],
+  alipay: [
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/alipay-1.jpeg`, alt: "支付宝会员积分兑换" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/alipay-2.jpeg`, alt: "支付宝优惠券领取中心" },
+    { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/wechat-pay-recommend.jpeg`, alt: "支付宝支付优惠指南" }
+  ]
+}
+
 // Data for 火车票优惠券
 const trainTicketLinks: LinkItem[] = [
   { href: "https://m.tb.cn/h.hQaDCUx?tk=UB9n42ji01H", text: "【闲鱼】 - 火车券20元无门槛火车票优惠券" },
@@ -129,6 +148,7 @@ const trainTicketTips = [
 const alipayLinks: LinkItem[] = [
   { href: "https://ur.alipay.com/_4gRmyjz0b1EF59Mw3Jh1oK", text: "支付宝会员中心 - 积分兑换优惠券" },
   { href: "https://ur.alipay.com/", text: "支付宝生活号 - 每日签到领积分" },
+  { href: "https://e.tb.cn/h.hMvsSEWhmbe4Kg6?tk=6x8D45tiFMp", text: "淘宝店铺-商品" },
   { href: "https://koubei.alipay.com/", text: "口碑 - 到店付款优惠券" },
   { href: "https://www.ele.me/", text: "饿了么 - 外卖红包券" },
   { href: "https://www.taobao.com/", text: "淘宝 - 购物津贴和店铺券" },
@@ -211,10 +231,11 @@ function InfoSection({ title, items, className = "" }: InfoSectionProps) {
   )
 }
 
-function ImageGallery() {
+function ImageGallery({ tabValue }: { tabValue: string }) {
+  const currentImages = tabImages[tabValue as keyof typeof tabImages] || tabImages.discount
   return (
     <div className="mb-8" style={{marginBottom: '1rem'}}>
-      <ImageModal images={images} />
+      <ImageModal images={currentImages} />
     </div>
   )
 }
@@ -328,6 +349,23 @@ function AlipayContent() {
   )
 }
 
+// 右上角游戏链接
+function GameGo() {
+  return (
+    <div className="absolute right-5 top-5 z-10">
+        <a 
+          href="https://lishulincug.github.io/webGameHub/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <Button className="flex items-center gap-1.5 bg-purple-600 hover:bg-purple-700 text-white">
+            <span>游戏中心</span>
+          </Button>
+        </a>
+      </div>
+  )
+}
+
 export default function CheckinRewardsPage() {
   // // 注册 Service Worker
   // useEffect(() => {
@@ -345,17 +383,25 @@ export default function CheckinRewardsPage() {
   //   }
   // }, [])
 
+  const [tabValue, setCurrentValue] = useState("discount");
+
+  // 切换时触发：更新 value + 获取标签名称
+  const handleValueChange = (newValue: string) => {
+    setCurrentValue(newValue);
+  }
+
   return (
     <div className="min-h-screen bg-[#f0f8ff] py-6" style={{paddingTop: "0rem"}}>
       <OfflineIndicator />
       <PWAInstall />
-
+      <GameGo/>
+      
       <div className="max-w-[800px] mx-auto my-5 p-5 md:p-6 bg-white rounded-lg shadow-md" style={{padding: "1rem"}}>
         <h1 className="text-2xl font-bold mb-6 text-center text-[#2c3e50]" style={{marginBottom: '0.5rem'}}>福利领取中心</h1>
 
-        <ImageGallery />
+        <ImageGallery tabValue={tabValue}/>
 
-        <Tabs defaultValue="discount" className="w-full">
+        <Tabs defaultValue="discount" value={tabValue}  onValueChange={handleValueChange}  className="w-full">
           <TabsList className="grid w-full grid-cols-3 mb-6" style={{marginBottom: '0.5rem'}}>
             <TabsTrigger value="discount" className="flex items-center gap-2">
               <Coins className="h-4 w-4" />
