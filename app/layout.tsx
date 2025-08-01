@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "微信打卡签到领金币/立减金汇总",
+  title: "福利领取中心",
   description: "汇总各种打卡签到领金币、立减金、红包的链接",
   // themeColor: "#2c3e50",
   appleWebApp: {

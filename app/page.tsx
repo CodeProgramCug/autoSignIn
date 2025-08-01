@@ -351,7 +351,7 @@ export default function CheckinRewardsPage() {
       <PWAInstall />
 
       <div className="max-w-[800px] mx-auto my-5 p-5 md:p-6 bg-white rounded-lg shadow-md" style={{padding: "1rem"}}>
-        <h1 className="text-2xl font-bold mb-6 text-center text-[#2c3e50]" style={{marginBottom: '0.5rem'}}>打卡领金币/立减金/红包汇总</h1>
+        <h1 className="text-2xl font-bold mb-6 text-center text-[#2c3e50]" style={{marginBottom: '0.5rem'}}>福利领取中心</h1>
 
         <ImageGallery />
 
