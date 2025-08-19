@@ -1,7 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { ImageModal } from "@/components/image-modal"
 import { PWAInstall } from "@/components/pwa-install"
 import { OfflineIndicator } from "@/components/offline-indicator"
@@ -45,20 +45,23 @@ const dailyCheckinLinks: LinkItem[] = [
 ]
 
 const limitedTimeDiscountLinks: LinkItem[] = [
-  { href: "#小程序://云闪付/Gn6frzjxdlNihZt", text: "#小程序://云闪付/Gn6frzjxdlNihZt" },
-  { href: "https://example.com/reduce-2", text: "立减金领取通道B：满100减20" },
-  { href: "https://example.com/reduce-3", text: "立减金领取通道C：新用户专属满30减15" },
+  { href: "#小程序://云闪付/Gn6frzjxdlNihZt", text: "云闪付小程序" },
+  { href: "#小程序://工行服务/ajrZfaHiPpWiact",  text: "工行储蓄卡月月刷：最高领20元立减金（8.31截止）" },
+  { href: "##小程序://中国建设银行/75JZiGVVasPxM1I", text: "建行红包雨：抽1.88-6.66元立减金（9.30截止）" },
+  { href: "https://example.com/reduce-3", text: "中行消费达标赠礼：满3笔199元领30元礼品（12.31截止）" }
 ]
 
 const weeklyCollectionLinks: LinkItem[] = [
   { href: "https://wap.10010hb.net/zinfo/wt/activity/hb/race/lamp?zx=12", text: "联通每周抽奖" },
-  { href: "https://example.com/reduce-2", text: "立减金领取通道B：满100减20" },
-  { href: "https://example.com/reduce-3", text: "立减金领取通道C：新用户专属满30减15" },
+  { href: "#小程序://兴业银行/BVwWMnh7tbz99Ns", text: "兴业6元喝咖啡：每周二抢星巴克/瑞幸券（8.31截止）" },
+  { href: "https://wap.psbc.com/zh/wxyh/ymt_clt/#/ymt/yxhd",  text: "邮储星级权益：每月19/29日领1-6元立减金（需资产达标）" }
 ]
 
 const monthlyDiscountLinks: LinkItem[] = [
   { href: "#小程序://中国建设银行/OQmP068lUbpi1sK", text: "小程序:中国建设银行立减金领取" },
-  { href: "#小程序://光大银行/TES2kYh65FZb61E", text: "小程序:光大银行立减金领取" },
+  { href: "#小程序://光大银行/TES2kYh65FZb61E", text: "光大阳光花园：每日浇水抽1-2元立减金" },
+  { href: "#小程序://交通银行/P3epqJKEbqRV5Nw", text: "交行月月有礼：签到抽1-88元立减金（8.31截止）" },
+  { href: "#小程序://浦发银行/6OVyTJwHsxt9sco", text: "浦发18财富日：集卡抽1-88元立减金（8.24截止）" }
 ]
 
 const bankDiscountInfo = [
@@ -173,10 +176,55 @@ const alipayMerchantInfo = [
 
 // Components
 function LinkItem({ href, text }: LinkItem) {
+  const isMiniProgram = href.startsWith("#小程序://")
+
+  const handleClick = useCallback((e: React.MouseEvent) => {
+    if (isMiniProgram) {
+      e.preventDefault()
+      // 复制到剪贴板，兼容性处理
+      if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+        navigator.clipboard.writeText(href)
+          .then(() => {
+            alert("该链接为微信小程序，请复制后在微信搜索栏粘贴打开。\n已自动复制到剪贴板。")
+          })
+          .catch(() => {
+            fallbackCopy(href)
+          })
+      } else {
+        fallbackCopy(href)
+      }
+    }
+    // 普通链接无需处理
+  }, [href, isMiniProgram])
+
+  // 兼容旧浏览器复制
+  function fallbackCopy(text: string) {
+    try {
+      const textArea = document.createElement("textarea")
+      textArea.value = text
+      document.body.appendChild(textArea)
+      textArea.select()
+      document.execCommand("copy")
+      document.body.removeChild(textArea)
+      alert("该链接为微信小程序，请复制后在微信搜索栏粘贴打开。\n已自动复制到剪贴板。")
+    } catch {
+      alert("请手动复制链接到微信搜索栏打开。\n复制失败，请长按链接手动复制。")
+    }
+  }
+
   return (
     <li className="mb-2.5 p-2 rounded bg-[#d9edf7] hover:bg-[#d3eafb] transition-colors cursor-pointer">
-      <a href={href} target="_blank" rel="noopener noreferrer" className="text-[#31708f] no-underline block">
+      <a
+        href={isMiniProgram ? "#" : href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#31708f] no-underline block"
+        onClick={handleClick}
+      >
         {text}
+        {isMiniProgram && (
+          <span className="ml-2 text-xs text-[#ff9800]">(微信小程序链接)</span>
+        )}
       </a>
     </li>
   )
