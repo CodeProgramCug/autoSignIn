@@ -48,6 +48,7 @@ const limitedTimeDiscountLinks: LinkItem[] = [
   { href: "#小程序://云闪付/Gn6frzjxdlNihZt", text: "云闪付小程序" },
   { href: "#小程序://工行服务/ajrZfaHiPpWiact",  text: "工行储蓄卡月月刷：最高领20元立减金（8.31截止）" },
   { href: "##小程序://中国建设银行/75JZiGVVasPxM1I", text: "建行红包雨：抽1.88-6.66元立减金（9.30截止）" },
+  { href: "https://lsjr.ccb.com/msmp/ecpweb/page/internet/dist/activity.html?CCB_EmpID=81860520&Spcl_CmAvy_ID=H4501b211a677a385000&Spcl_CmAvy_Nm=%E6%89%8B%E6%9C%BA%E9%93%B6%E8%A1%8C%E5%A4%A9%E5%A4%A9%E4%B9%90&CLData=Z28081&prtflId=SS450250819203122496&cmpnTskId=SC450250819204555820&wxwork_userid=V1001299", text: "建设银行天天乐" },
   { href: "https://example.com/reduce-3", text: "中行消费达标赠礼：满3笔199元领30元礼品（12.31截止）" }
 ]
 
