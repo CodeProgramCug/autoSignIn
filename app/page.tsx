@@ -49,16 +49,20 @@ const limitedTimeDiscountLinks: LinkItem[] = [
   { href: "#小程序://工行服务/ajrZfaHiPpWiact",  text: "工行储蓄卡月月刷：最高领20元立减金（8.31截止）" },
   { href: "##小程序://中国建设银行/75JZiGVVasPxM1I", text: "建行红包雨：抽1.88-6.66元立减金（9.30截止）" },
   { href: "https://lsjr.ccb.com/msmp/ecpweb/page/internet/dist/activity.html?CCB_EmpID=81860520&Spcl_CmAvy_ID=H4501b211a677a385000&Spcl_CmAvy_Nm=%E6%89%8B%E6%9C%BA%E9%93%B6%E8%A1%8C%E5%A4%A9%E5%A4%A9%E4%B9%90&CLData=Z28081&prtflId=SS450250819203122496&cmpnTskId=SC450250819204555820&wxwork_userid=V1001299", text: "建设银行天天乐" },
-  { href: "https://example.com/reduce-3", text: "中行消费达标赠礼：满3笔199元领30元礼品（12.31截止）" }
+  { href: "https://wap.bank.ecitic.com/NMBFOServer/MobileBankWeb/?index=Share.BankShare.Index&key=LXWWB/as5Jje6SBBBdr8XbiwIk8sQL+tD44m2Qi6UjvOrQKA2uQd8tpkJHnc48pCsI8HaFwBjtoaVoUWDYqxmyNLd88vwK3qVcqNW8wnNOirZtlTIX5+y79OhAEJY8YzxDZpw7d7kqb7CHfRzT+4ycLuLt/vhoAWct3/xwG9cjPhX2LGY4ADxiux0/lwtIMOGQZH8Pb28CF20mtR0Sb3GjHWsk/y5Qo/XA+l3rSO955ve7obqsMYcd1aO8m7HdMYlTlKzVYW/KAjswhIXj6xvyLWpRbajDeOYgY21yE3kxDSPkUHRYwsIxs0Dciozanduq98LbBlRGf7csekTMO2YHo7eBUHfreUD1Vgio2FKQefYCl6wskqpsxrhq+kYB+COuUJRpI/OtjdNJ2HmCGXaooklhkyuWF/JTm6LgDCodayV2QWMVjyxAhLWfBHg7oXg3NXsOeImyF2njb1rcD2Rcumus6hc2e1b7mBcQH+909ywRVg4w9BAw==CITICBANKLOGO", text: "中信银行连续签到赢好礼，6元支付宝红包" },
+  { href: "https://wap.bank.ecitic.com/NMBFOServer/MobileBankWeb/?index=Mini.Url.Scheme&scene=7372456885255745536", text: "中信银行至高500元微信立减金" },
+  { href: "https://wap.cebbank.com/wx_skip.html?url=https://ceb-shining-calendar.weijuju.com/app/index/app04/FP3oJ0RW8dije1zt?mertype=merchantweb", text: "光大银行每日打卡赚金币" },
 ]
 
 const weeklyCollectionLinks: LinkItem[] = [
   { href: "https://wap.10010hb.net/zinfo/wt/activity/hb/race/lamp?zx=12", text: "联通每周抽奖" },
+  { href: "https://mbank.95559.com.cn/mobs6/tangram8/TG0/NTG0001.html?promoteCode=20250526AJMYM005&channelShare=wxhy-20250513AHXJF108", text: "交通银行每周领1-8.8元云网券" },
   { href: "#小程序://兴业银行/BVwWMnh7tbz99Ns", text: "兴业6元喝咖啡：每周二抢星巴克/瑞幸券（8.31截止）" },
   { href: "https://wap.psbc.com/zh/wxyh/ymt_clt/#/ymt/yxhd",  text: "邮储星级权益：每月19/29日领1-6元立减金（需资产达标）" }
 ]
 
 const monthlyDiscountLinks: LinkItem[] = [
+  { href: "https://event.ccbft.com/ccbact/m3742/AP450202407011648001-act.html#/home", text: "建行约会八桂，各种10元立减金" },
   { href: "#小程序://中国建设银行/OQmP068lUbpi1sK", text: "小程序:中国建设银行立减金领取" },
   { href: "#小程序://光大银行/TES2kYh65FZb61E", text: "光大阳光花园：每日浇水抽1-2元立减金" },
   { href: "#小程序://交通银行/P3epqJKEbqRV5Nw", text: "交行月月有礼：签到抽1-88元立减金（8.31截止）" },
