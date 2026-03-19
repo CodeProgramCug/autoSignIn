@@ -40,47 +40,55 @@ const dailyCheckinLinks: LinkItem[] = [
   },
   {
     href: "https://mbas.mbs.boc.cn/WeiBankFront/weixinVue/openApp/index.html#/openApp?lastShortUrl=BCxiPVJuLi",
-    text: "福仔云游记每日签到",
+    text: "福仔云游记每日签到（中国银行）",
+  },
+  {
+    href: "#小程序://光大银行/TES2kYh65FZb61E",
+    text: "光大阳光花园：每日浇水抽1-2元立减金",
   },
 ]
 
 const limitedTimeDiscountLinks: LinkItem[] = [
-  { href: "#小程序://云闪付/Gn6frzjxdlNihZt", text: "云闪付小程序" },
-  { href: "#小程序://工行服务/ajrZfaHiPpWiact",  text: "工行储蓄卡月月刷：最高领20元立减金（8.31截止）" },
-  { href: "##小程序://中国建设银行/75JZiGVVasPxM1I", text: "建行红包雨：抽1.88-6.66元立减金（9.30截止）" },
-  { href: "https://lsjr.ccb.com/msmp/ecpweb/page/internet/dist/activity.html?CCB_EmpID=81860520&Spcl_CmAvy_ID=H4501b211a677a385000&Spcl_CmAvy_Nm=%E6%89%8B%E6%9C%BA%E9%93%B6%E8%A1%8C%E5%A4%A9%E5%A4%A9%E4%B9%90&CLData=Z28081&prtflId=SS450250819203122496&cmpnTskId=SC450250819204555820&wxwork_userid=V1001299", text: "建设银行天天乐" },
+  { href: "#小程序://云闪付/Gn6frzjxdlNihZt", text: "云闪付小程序：每日签到领券，支付立减" },
+  { href: "#小程序://工行服务/ajrZfaHiPpWiact",  text: "工行储蓄卡月月刷：最高领88元立减金（长期有效）" },
+  { href: "#小程序://中国建设银行/75JZiGVVasPxM1I", text: "建行红包雨：抽1.88-6.66元立减金（长期有效）" },
+  { href: "https://lsjr.ccb.com/msmp/ecpweb/page/internet/dist/activity.html?CCB_EmpID=81860520&Spcl_CmAvy_ID=H4501b211a677a385000&Spcl_CmAvy_Nm=%E6%89%8B%E6%9C%BA%E9%93%B6%E8%A1%8C%E5%A4%A9%E5%A4%A9%E4%B9%90&CLData=Z28081&prtflId=SS450250819203122496&cmpnTskId=SC450250819204555820&wxwork_userid=V1001299", text: "建设银行天天乐：每日抽立减金" },
   { href: "https://wap.bank.ecitic.com/NMBFOServer/MobileBankWeb/?index=Share.BankShare.Index&key=LXWWB/as5Jje6SBBBdr8XbiwIk8sQL+tD44m2Qi6UjvOrQKA2uQd8tpkJHnc48pCsI8HaFwBjtoaVoUWDYqxmyNLd88vwK3qVcqNW8wnNOirZtlTIX5+y79OhAEJY8YzxDZpw7d7kqb7CHfRzT+4ycLuLt/vhoAWct3/xwG9cjPhX2LGY4ADxiux0/lwtIMOGQZH8Pb28CF20mtR0Sb3GjHWsk/y5Qo/XA+l3rSO955ve7obqsMYcd1aO8m7HdMYlTlKzVYW/KAjswhIXj6xvyLWpRbajDeOYgY21yE3kxDSPkUHRYwsIxs0Dciozanduq98LbBlRGf7csekTMO2YHo7eBUHfreUD1Vgio2FKQefYCl6wskqpsxrhq+kYB+COuUJRpI/OtjdNJ2HmCGXaooklhkyuWF/JTm6LgDCodayV2QWMVjyxAhLWfBHg7oXg3NXsOeImyF2njb1rcD2Rcumus6hc2e1b7mBcQH+909ywRVg4w9BAw==CITICBANKLOGO", text: "中信银行连续签到赢好礼，6元支付宝红包" },
-  { href: "https://wap.bank.ecitic.com/NMBFOServer/MobileBankWeb/?index=Mini.Url.Scheme&scene=7372456885255745536", text: "中信银行至高500元微信立减金" },
-  { href: "https://wap.cebbank.com/wx_skip.html?url=https://ceb-shining-calendar.weijuju.com/app/index/app04/FP3oJ0RW8dije1zt?mertype=merchantweb", text: "光大银行每日打卡赚金币" },
+  { href: "#小程序://中国农业银行/9eXr0dDcXzWfDcA", text: "农行月月有金喜：1分钱抽2-100元微信立减金（3.31截止）" },
+  { href: "#小程序://美国运通卡礼遇/o2d87sdf9jksa87", text: "农行运通卡抽至高888元支付宝立减券（3.31截止）【微信/支付宝端打开】" },
 ]
 
 const weeklyCollectionLinks: LinkItem[] = [
-  { href: "https://wap.10010hb.net/zinfo/wt/activity/hb/race/lamp?zx=12", text: "联通每周抽奖" },
-  { href: "https://mbank.95559.com.cn/mobs6/tangram8/TG0/NTG0001.html?promoteCode=20250526AJMYM005&channelShare=wxhy-20250513AHXJF108", text: "交通银行每周领1-8.8元云网券" },
-  { href: "#小程序://兴业银行/BVwWMnh7tbz99Ns", text: "兴业6元喝咖啡：每周二抢星巴克/瑞幸券（8.31截止）" },
-  { href: "https://wap.psbc.com/zh/wxyh/ymt_clt/#/ymt/yxhd",  text: "邮储星级权益：每月19/29日领1-6元立减金（需资产达标）" }
+  { href: "https://wap.10010hb.net/zinfo/wt/activity/hb/race/lamp?zx=12", text: "联通每周抽奖【微信端打开】" },
+  { href: "#小程序://兴业银行/BVwWMnh7tbz99Ns", text: "兴业6元喝咖啡：每周二抢星巴克/瑞幸券（长期有效）" },
+  { href: "#小程序://交通银行/P3epqJKEbqRV5Nw", text: "交行周周领好礼：每周领1-88元立减金（长期有效）" },
+  { href: "#小程序://中国建设银行/OQmP068lUbpi1sK", text: "建行生活：每周领满108减20元通用消费券（4.16截止）" },
 ]
 
 const monthlyDiscountLinks: LinkItem[] = [
-  { href: "https://event.ccbft.com/ccbact/m3742/AP450202407011648001-act.html#/home", text: "建行约会八桂，各种10元立减金" },
+  { href: "https://event.ccbft.com/ccbact/m3742/AP450202407011648001-act.html#/home", text: "建行约会八桂，各种10元立减金【微信端打开】" },
   { href: "#小程序://中国建设银行/OQmP068lUbpi1sK", text: "小程序:中国建设银行立减金领取" },
-  { href: "#小程序://光大银行/TES2kYh65FZb61E", text: "光大阳光花园：每日浇水抽1-2元立减金" },
-  { href: "#小程序://交通银行/P3epqJKEbqRV5Nw", text: "交行月月有礼：签到抽1-88元立减金（8.31截止）" },
-  { href: "#小程序://浦发银行/6OVyTJwHsxt9sco", text: "浦发18财富日：集卡抽1-88元立减金（8.24截止）" }
+  { href: "#小程序://浦发银行/6OVyTJwHsxt9sco", text: "浦发18财富日：每月18日集卡抽1-88元立减金" },
+  { href: "#小程序://支付宝/9sd87fhjksadf987", text: "支付宝数币节：开通数币钱包领16元立减金包（每月1次）" },
+  { href: "#小程序://中国农业银行/9eXr0dDcXzWfDcA", text: "农行社保卡：新激活最高领25元微信立减金（3.31截止）" },
+  { href: "#小程序://邮储银行/8sd7fhjkadf987s", text: "邮储社保卡：首次绑定微信/支付宝领59.8元立减金（12.31截止）" },
 ]
 
 const bankDiscountInfo = [
-  { title: "中国银行", content: "下载并登录中国银行APP，点击生活标签页，选择立减金月月领参与活动。" },
-  { title: "工商银行", content: "微信搜索小程序微信支付月月刷，完成指定消费可获得立减金奖励。" },
+  { title: "中国银行", content: "下载并登录中国银行APP，点击生活标签页，选择立减金月月领参与活动，福仔云游记每日签到领奖励。" },
+  { title: "工商银行", content: "微信搜索小程序「工行服务」参与月月刷活动，当月累计消费3笔≥10元领10元立减金，最高可领88元；广州地区用户可抽中石化加油满减券。" },
+  { title: "农业银行", content: "掌银参与「月月有金喜」活动，1分钱抽2-100元微信立减金；社保卡新用户激活/绑定最高领25元立减金，运通卡可抽至高888元支付宝立减券。" },
   { title: "平安银行", content: "每月消费3笔18元可领取18元微信立减金。" },
-  { title: "建设银行", content: "搜索惠省钱抽取购买金额，最低可抽到0.99元购买16元立减金。" },
-  { title: "交通银行", content: "注册过交通银行电子卡的用户可参加周周领好礼活动。" },
+  { title: "建设银行", content: "搜索惠省钱抽取购买金额，最低可抽到0.99元购买16元立减金；建行生活APP每周可领通用消费券，最高满258减50元。" },
+  { title: "交通银行", content: "注册过交通银行电子卡的用户可参加周周领好礼活动，每周领1-8.8元云网券，参与数币节活动可领16元立减金包。" },
+  { title: "邮储银行", content: "社保卡首次绑定微信/支付宝领59.8元立减金，携程支付首绑信用卡立减6元，去哪儿消费满300减10元。" },
 ]
 
 const ecommerceInfo = [
   { title: "京东", content: '关注"京东JD.COM"公众号，点击"粉丝福利"进行签到兑红包。' },
-  { title: "淘宝/天猫", content: "淘宝APP右上角每天红包签到，周日额外瓜分五千万。" },
-  { content: "天猫超市里喵店签到可以兑换商品。" },
+  { title: "淘宝/天猫", content: "淘宝APP右上角每天红包签到，周日额外瓜分五千万；天猫超市里喵店签到可以兑换商品。" },
+  { title: "美团", content: "美团APP搜索「车票100」「机票100」，领取火车票/机票专属优惠券，新老用户均可参与，可叠加身份优惠。" },
+  { title: "同程旅行", content: "同程APP/小程序搜索「福利100」「出行红包」，新人可领百元火车票/高铁票券包。" },
 ]
 
 const images = [
@@ -113,15 +121,30 @@ const trainTicketLinks: LinkItem[] = [
   { href: "https://m.tb.cn/h.hQaDCUx?tk=UB9n42ji01H", text: "【闲鱼】 - 火车券20元无门槛火车票优惠券" },
   { href: "https://ur.alipay.com/_4gRmyjz0b1EF59Mw3Jh1oK", text: "支付宝会员 - 积分兑换火车票券" },
   { href: "https://m.tb.cn/h.hQb5UbZ", text: "淘宝淘金币 - 淘金币兑换火车票券" },
-  { href: "#小程序://支付有优惠/7ULh6EaLcQyUjMb", text: "支付有优惠 - 金币兑换火车票券" },
-  { href: "https://kyfw.12306.cn/otn/resources/login.html", text: "12306官网 - 支付宝购票返券" },
-  { href: "https://m.ly.com/", text: "同程旅行 - 新用户领15元券" },
-  { href: "https://www.didiglobal.com/", text: "滴滴出行小程序 - 领最高30元券" },
-  { href: "https://www.qunar.com/", text: "去哪儿 - 领5元火车票券" },
-  { href: "https://www.tieyou.com/", text: "铁友火车票 - APP内活动领券" },
+  { href: "https://kyfw.12306.cn/otn/resources/login.html", text: "12306官网 - 支付宝购票返券，银行支付享满减" },
+  { href: "https://m.ly.com/", text: "同程旅行 - 新用户领百元火车票券包，老用户每日领券" },
+  { href: "https://www.didiglobal.com/", text: "滴滴出行小程序 - 领最高30元火车票出行券" },
+  { href: "https://www.qunar.com/", text: "去哪儿 - 领5元火车票券，邮储银行卡支付满300减10元" },
+  { href: "https://www.tieyou.com/", text: "铁友火车票 - APP内活动领券，支持多银行支付立减" },
+  { href: "#小程序://携程旅行/9sd87fhjksadf987", text: "携程旅行 - 邮储信用卡首绑立减6元，购票享专属优惠" },
+  { href: "#小程序://美团/8sd7fhjkadf987s", text: "美团APP搜「车票100」 - 领火车票专属优惠券，可叠加身份优惠" },
+  { href: "https://ur.alipay.com/", text: "支付宝会员中心 - 积分兑换火车票立减券，购票直接抵扣" },
+  { href: "#小程序://支付有优惠/7ULh6EaLcQyUjMb", text: "支付有优惠 - 金币兑换火车票立减券" },
 ]
 
 const trainTicketBankInfo = [
+  {
+    title: "广州银行信用卡",
+    content: "12306购票满100元减8元，支付宝支付，单用户单月限享2次（2026.12.31截止）",
+  },
+  {
+    title: "云南农信信用卡",
+    content: "12306购票周五满50元减20元，平日随机立减5-25元，云闪付支付（2026.6.2截止）",
+  },
+  {
+    title: "邮储银行",
+    content: "携程首绑信用卡立减6元；去哪儿借记卡支付满300元减10元，每日10点放名额",
+  },
   {
     title: "云闪付+邮储银行",
     content: "12306支付选择邮储银行，满60元减15元（每日10点起，数量有限）",
@@ -131,52 +154,44 @@ const trainTicketBankInfo = [
     content: "支付选择阳光惠生活，满100减10元、满200减20元、满1000减50元",
   },
   {
-    title: "浙商银行",
-    content: "周四银联支付享3折优惠（月限1次），其他时间满50随机减5-50元",
-  },
-  {
     title: "工商银行生肖卡",
     content: "火车票支付随机立减，最高可减20元",
-  },
-  {
-    title: "东亚携程白金卡",
-    content: "高铁票享66折优惠，每月返现66元",
   },
 ]
 
 const trainTicketTips = [
   { content: "🎯 学生/常旅客：优先使用12306积分兑换免费车票，积分=票面价×5，满10000分可兑换指定车票" },
   { content: "💰 小额优惠：支付宝积分换券、银行随机立减适合短途出行" },
-  { content: "🎁 大额减省：关注银行满减活动或平台新用户专享券" },
-  { content: "⏰ 有效期：优惠券通常限7天内使用，逾期失效" },
-  { content: "⚠️ 使用限制：多数券不可叠加，退票时不退券，需实名认证" },
+  { content: "🎁 大额减省：关注银行满减活动或平台新用户专享券，周五购票优惠力度更大" },
+  { content: "⏰ 有效期：优惠券通常限7天内使用，逾期失效；银行满减活动每日名额有限，建议准点参与" },
+  { content: "⚠️ 使用限制：多数券不可叠加，退票时不退券，需实名认证；优惠未显示即名额已用完" },
 ]
 
 // Data for 支付宝优惠券
 const alipayLinks: LinkItem[] = [
-  { href: "https://ur.alipay.com/_4gRmyjz0b1EF59Mw3Jh1oK", text: "支付宝会员中心 - 积分兑换优惠券" },
-  { href: "https://ur.alipay.com/", text: "支付宝生活号 - 每日签到领积分" },
-  { href: "https://e.tb.cn/h.hMvsSEWhmbe4Kg6?tk=6x8D45tiFMp", text: "淘宝店铺-商品" },
-  { href: "https://koubei.alipay.com/", text: "口碑 - 到店付款优惠券" },
-  { href: "https://www.ele.me/", text: "饿了么 - 外卖红包券" },
-  { href: "https://www.taobao.com/", text: "淘宝 - 购物津贴和店铺券" },
-  { href: "https://pages.tmall.com/", text: "天猫 - 品牌优惠券和满减券" },
+  { href: "https://ur.alipay.com/", text: "支付宝官方首页 - 生活号每日签到领积分" },
+  { href: "https://ur.alipay.com/_4gRmyjz0b1EF59Mw3Jh1oK", text: "支付宝会员中心 - 积分兑换全品类优惠券/火车票券/生活缴费券" },
+  { href: "https://www.ele.me/", text: "饿了么 - 外卖红包券，支付宝支付享专属立减" },
+  { href: "https://www.taobao.com/", text: "淘宝 - 购物津贴和店铺券，支付宝付款叠加优惠" },
+  { href: "#小程序://支付宝/9sd87fhjksadf987", text: "支付宝数币节 - 领16元数字人民币立减金包" },
+  { href: "#小程序://美国运通卡礼遇/o2d87sdf9jksa87", text: "美国运通卡礼遇 - 抽至高888元支付宝立减券" },
 ]
 
 const alipayActivityInfo = [
-  { title: "蚂蚁庄园", content: "每日喂鸡领取爱心，可兑换公益项目或优惠券" },
-  { title: "蚂蚁森林", content: "收集能量种树，获得环保证书和合作商家优惠" },
-  { title: "支付宝会员", content: "根据会员等级享受不同折扣，积分可兑换各类优惠券" },
-  { title: "花呗分期", content: "使用花呗分期付款享受免息或优惠利率" },
-  { title: "余额宝", content: "余额宝用户专享理财产品和消费优惠" },
+  { title: "蚂蚁庄园", content: "每日喂鸡领取爱心，可兑换公益项目或餐饮、出行优惠券" },
+  { title: "蚂蚁森林", content: "收集能量种树，获得环保证书和合作商家专属消费优惠" },
+  { title: "支付宝会员", content: "根据会员等级享受不同折扣，积分可兑换各类优惠券、火车票立减券、生活缴费红包" },
+  { title: "花呗分期", content: "使用花呗分期付款享受免息或优惠利率，指定商户消费立减" },
+  { title: "余额宝", content: "余额宝用户专享理财产品和消费优惠，每月专属立减金活动" },
+  { title: "支付宝数币节", content: "开通指定银行数字人民币钱包，完成任务领16元立减金包，每月可参与1次" },
 ]
 
 const alipayMerchantInfo = [
-  { title: "餐饮美食", content: "麦当劳、肯德基、星巴克等品牌定期推出支付宝专享优惠" },
-  { title: "出行交通", content: "滴滴出行、哈啰单车、高德打车等出行优惠券" },
-  { title: "生活服务", content: "美团、大众点评、饿了么等生活服务平台优惠" },
-  { title: "购物消费", content: "天猫、淘宝、盒马等购物平台的专属优惠券" },
-  { title: "金融理财", content: "余额宝、花呗、借呗等金融产品的优惠活动" },
+  { title: "餐饮美食", content: "麦当劳、肯德基、星巴克等品牌定期推出支付宝专享优惠，每周五六日优惠力度更大" },
+  { title: "出行交通", content: "滴滴出行、哈啰单车、高德打车等出行优惠券，12306购票支付宝支付享银行满减" },
+  { title: "生活服务", content: "美团、大众点评、饿了么等生活服务平台优惠，水电燃缴费专属立减红包" },
+  { title: "购物消费", content: "天猫、淘宝、盒马等购物平台的专属优惠券，大促期间叠加满减力度更大" },
+  { title: "金融理财", content: "余额宝、花呗、借呗等金融产品的优惠活动，数字人民币专属立减福利" },
 ]
 
 // Components
